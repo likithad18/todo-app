@@ -1,12 +1,12 @@
 # 📌 To-Do-App
 
-## 📝 To Do Web Application Readme
+## 📝 To Do Web Application
 
 ---
 
 ## 📖 Introduction
 
-This is a simple *To-Do Web Application* built using *Java, **Spring Boot, **JSP, **HTML, **CSS, and **MySQL* database.  
+This is a simple *To-Do Web Application* built using *Java, **Spring Boot, **JSP, **HTML, **CSS, and **MySQL*.  
 It provides basic *CRUD* (Create, Read, Update, Delete) functionality for managing to-do tasks.  
 Users can *add, view, update, and delete* tasks through a user-friendly web interface.
 
@@ -14,47 +14,45 @@ Users can *add, view, update, and delete* tasks through a user-friendly web inte
 
 ## 💻 Technologies
 
-- *Java*: Provides robustness, platform independence, and extensive libraries—ideal for enterprise-grade applications.
-- *Spring Boot*: Simplifies the development of stand-alone, production-ready Spring applications with minimal configuration.
-- *JSP (JavaServer Pages)*: Used to create dynamic web content with embedded Java logic.
-- *HTML*: Structures web content.
-- *CSS*: Enhances the presentation and layout of the HTML content.
-- *MySQL*: A reliable, scalable, and fast relational database used for persistent data storage.
+- *Java* – Robust, platform-independent, and ideal for enterprise-grade applications.
+- *Spring Boot* – Simplifies the development of stand-alone, production-ready Spring applications.
+- *JSP* – JavaServer Pages used to create dynamic web content.
+- *HTML & CSS* – For layout and styling of the user interface.
+- *MySQL* – Relational database for persistent task storage.
 
 ---
 
 ## ✨ Features
 
-- *Create*: Add new tasks with a title, description, and due date.
-- *Read*: View all existing tasks with full details.
-- *Update*: Edit any task’s title, description, or due date.
-- *Delete*: Remove tasks from the list permanently.
-- *Search*: Find specific tasks by title or description.
+- 🆕 *Create* tasks with title, description, and due date.
+- 📄 *Read* and view all tasks.
+- ✏ *Update* any task.
+- ❌ *Delete* completed or irrelevant tasks.
+- 🔍 *Search* for tasks (by title or description).
 
 ---
 
 ## 🧱 Architecture
 
-The application follows the *MVC (Model-View-Controller)* design pattern:
+Follows the *MVC (Model-View-Controller)* pattern:
 
-- *Model*: Defines the Task entity and handles business logic and database interactions.
-- *View*: JSP files render dynamic HTML content and display data.
-- *Controller*: Spring Boot controllers handle user requests and direct them to the appropriate views.
+- *Model* – Task entity and database logic.
+- *View* – JSP templates for UI.
+- *Controller* – Spring Boot controller to manage requests.
 
 ---
 
 ## 📦 Modules
 
-1. *Task Management Module*: Supports CRUD operations for tasks.
-2. *User Interface Module*: Provides a clean and functional interface using JSP, HTML, and CSS.
-3. *Database Module*: Connects to MySQL to store and retrieve task data.
+1. *Task Management Module* – CRUD operations for tasks.
+2. *User Interface Module* – JSP-based UI with HTML and CSS.
+3. *Database Module* – MySQL integration and persistence.
 
 ---
 
 ## 👤 Users
 
-This application is ideal for *students, professionals, and anyone* needing a straightforward way to manage their to-do lists.  
-Users can log in and organize tasks to increase productivity and stay organized.
+Ideal for *students, professionals, or **anyone* needing an easy-to-use task manager.
 
 ---
 
@@ -62,42 +60,45 @@ Users can log in and organize tasks to increase productivity and stay organized.
 
 ### ✅ Prerequisites
 
-- Java 17+
-- Maven
-- MySQL installed and running
+Make sure the following tools are installed:
 
-### 🔧 Steps to Run
+- [Java 17+](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Maven](https://maven.apache.org/install.html)
+- [MySQL](https://dev.mysql.com/downloads/installer/)
 
-1. *Clone the repository*  
+---
+
+### 🔧 Steps to Run the Application
+
+#### ⿡ Clone the Repository
+
 bash
-
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/likithad18/todo-app.git
 cd todo-app
 
-2.** Create the database in MySQL**
+#### ⿢ Create the MySQL Database
+Open MySQL and run:
 
 sql
-
 CREATE DATABASE tododb;
-Configure application.properties
-Update the database credentials:
 
-3.*properties*
+#### ⿣ Configure application.properties
+Edit the file located at src/main/resources/application.properties:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/tododb
-spring.datasource.username=root
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.mvc.view.prefix=/WEB-INF/jsp/
-spring.mvc.view.suffix=.jsp
+properties
 
-4.*Build and run the project*
+- spring.datasource.url=jdbc:mysql://localhost:3306/tododb
+- spring.datasource.username=root
+- spring.datasource.password=your_password
+- spring.jpa.hibernate.ddl-auto=update
+- spring.jpa.show-sql=true
+- spring.mvc.view.prefix=/WEB-INF/jsp/
+- spring.mvc.view.suffix=.jsp
+- Replace your_password with your actual MySQL root password.
 
+#### ⿤ Build and Run the Project
 bash
-
 mvn spring-boot:run
-Access the web app
-
-Finally Open your browser and go to:
+#### ⿥ Access the Web Application
+Open your browser and go to:
 http://localhost:8080/
