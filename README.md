@@ -70,19 +70,19 @@ Make sure the following tools are installed:
 
 ### 🔧 Steps to Run the Application
 
-#### ⿡ Clone the Repository
+#### 1 Clone the Repository
 
 bash
 git clone https://github.com/likithad18/todo-app.git
 cd todo-app
 
-#### ⿢ Create the MySQL Database
+#### 2 Create the MySQL Database
 Open MySQL and run:
 
 sql
 CREATE DATABASE tododb;
 
-#### ⿣ Configure application.properties
+#### 3 Configure application.properties
 Edit the file located at src/main/resources/application.properties:
 
 properties
@@ -96,9 +96,9 @@ properties
 - spring.mvc.view.suffix=.jsp
 - Replace your_password with your actual MySQL root password.
 
-#### ⿤ Build and Run the Project
+#### 4 Build and Run the Project
 bash
 mvn spring-boot:run
-#### ⿥ Access the Web Application
+#### 5 Access the Web Application
 Open your browser and go to:
 http://localhost:8080/
